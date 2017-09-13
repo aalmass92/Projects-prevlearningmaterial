@@ -4,7 +4,7 @@
 int main (void)
 {
   int i = 0;
-  char*str = "Hello World!\n";
+  char*str = "Hello World!!\n";
 
   /*Print each character until each '\0 '*/
   while (str[i]!='\0')
