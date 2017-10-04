@@ -1,21 +1,22 @@
 #include <stdio.h>
 
-#define SEPARATOR printf("+----+----+----+----+----+----+\n");
-#define COLUMNS 5
-#define SIZE 5
+#define SEPARATOR printf("+----+----+----+----+----+----+----+----+----+----+----+\n");
+#define COLUMNS 10
+#define SIZE 10
 
 int main (void)
 
 {
   // initialize parameters
-  int row, i, myArray[5] = { 1, 2, 3, 4, 5};
+  int row, i, myArray[10] = { 1, 2, 3, 4, 5, 6 ,7 , 8 , 9 , 10};
 
   // title for output
   printf(" $ multirect5\n");
 
   SEPARATOR
-  printf("|    |  %d |  %d |  %d |  %d |  %d |\n",
-  myArray[0], myArray[1], myArray[2], myArray[3],myArray[4]);
+  printf("|    |  %d |  %d |  %d |  %d |  %d |  %d |  %d |  %d |  %d | %d |\n",
+	 myArray[0], myArray[1], myArray[2], myArray[3],myArray[4], myArray[5],
+	 myArray[6], myArray[7],myArray[8],myArray[9]);
   
   SEPARATOR 
 
