@@ -5,7 +5,7 @@ int main (void)
   int i,a;
   printf ("$ patstar\n");
   for (i = 1; i <= ROWS; i++){
-    for (a = 1; a <= i; a++) {
+    for (a = 10; a >= i; a--) {
       printf("*");
   }
   printf("\n");
