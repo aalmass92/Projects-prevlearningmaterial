@@ -1,0 +1,67 @@
+/*
+1.Any live cell with fewer than two live neighbours dies, as if caused by under-population.
+2.Any live cell with two or three live neighbours lives on to the next generation.
+3.Any live cell with more than three live neighbours dies, as if by over-population.
+4.Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction. */
+
+#include <stdio.h>
+#define ROW 80
+#define COL 24
+
+/*void rules ( ){
+
+
+
+
+  }*/
+
+int void draw_init (int ROW, int COL){ 
+
+
+}
+
+int void draw_life( int ROW, int COL, short*state){
+
+}
+
+
+
+
+int main (int argc, char*argc[]){
+
+
+
+  int i, j, cell;
+  unsigned short state[ROW][COL];
+
+  for( i = 0 ; i < COL; i++){
+    for (j = 0; j < ROW; j++){
+     
+      //r1
+      if (cell <2){ 
+	state[i][j] = 0;
+      }
+
+      //r2
+      if(cell == 2 || 3){
+
+	state[i][j] = 1;
+
+      }
+      //r3
+      if (cell > 3){
+
+	state[i][j] = 0;
+
+      }
+
+      //r4
+      if ( state == 0 && cell === 3){
+
+	state [i][j] = 1;
+
+      }
+    }
+
+
+}
