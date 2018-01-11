@@ -4,4 +4,9 @@ import socket
 
 f = open("/proc/meminfo","r")
 
-print "Hostname:",( socket.gethostname()), (f.read())
+mem = f.readline(27).split()
+
+total = float(float(mem[1])/1024)
+
+print "Hostname: "+( socket.gethostname())+",", "Memory:",total, "MB"
+
