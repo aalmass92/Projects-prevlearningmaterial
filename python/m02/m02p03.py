@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import keyword
 
 i = 0

@@ -1,11 +1,12 @@
 #!/usr/bin/python
 
 import sys
-x = int(sys.argv[1])
 
-y = int(sys.argv[2])
+x = input("First Number:")
 
-op = sys.argv[3]
+y = input ("Second Number:")
+
+op = raw_input("Operation:")
 
 sum = int(x + y)
 
@@ -16,10 +17,11 @@ min = int(x - y)
 div = int(x / y)
 
 if op == 'times':
- print ti  
+ print x,'x',y,'=' ,ti  
 
 elif op == 'minus':
- print (min)
+ print x,'-',y,'=',min
 
 elif op == 'plus':
-    print (sum )
+    print x,'+',y,'=',sum
+
