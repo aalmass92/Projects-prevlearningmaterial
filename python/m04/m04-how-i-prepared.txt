@@ -1,0 +1,6 @@
+I have read the lab before class
+I have researched what /proc/[pid]/stat was
+I have researched PIl GUI was
+I have found brief information how GTK3 can Intract with Glade
+I found tutorials both website and videos
+I have spoke geting a guidence from a proffesional 
