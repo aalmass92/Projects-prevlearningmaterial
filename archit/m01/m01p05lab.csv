@@ -1,8 +1,10 @@
 CLK	IP	INSTRUCTION	ADR	DATA	R6	R5	R4	R3	R2	R1	R0
-1	10	mov r1,[adr1]	2	3						3
-2	4	mov r2,[adr2]	5	6					6	3	
-3	7	add r1,r1,r2							6	9	
-4	19	mov r3,#80						80	6	9	
-5	20	mul r1,r1,r3					123	80	6	720				
-6	25	mov r4,#123					123	80	6	720
-7	33	mov r4,r1	123	720			
+1				2	3
+2				5	6
+3	10	mov r1,[adr1]								3
+4       14	mov r2,[adr2]							6	3	
+5       18	add r1,r1,r2							6	9	
+6       22	mov r3,#80						80	6	9	
+7	26	mul r1,r1,r3						80	6	720				
+8	30	mov r4,#123					123	80	6	720
+9	34	mov [r4],r1	123	720                     123     80	6	720			
