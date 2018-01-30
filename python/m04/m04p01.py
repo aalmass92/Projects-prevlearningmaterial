@@ -1,3 +1,4 @@
+#!/usr/bin/python 
 import sys
 class LinuxProcess:
     def __init__(self, pid):
