@@ -1,0 +1,19 @@
+#!/usr/bin/python
+
+import sys
+import random
+
+letter_dictionary = { 'b' : 8, 'w': 16, 'd': 32, 'q' : 64}
+
+if (len(sys.argv) < 2):
+    print('Script Usage: m02rand.py string{b,w,d,q}')
+    sys.exit()
+
+variablewidth = sys.argv[1]
+
+for char in variablewidth:
+    if(char in letter_dictionary):
+        out_width = letter_dictionary[char]
+        print('0x%x' % random.getrandbits(out_width))
+    else:
+        print('char %c is not allowed\nAllowed chars are: %s' % (char, letter_dictionary.keys()))
