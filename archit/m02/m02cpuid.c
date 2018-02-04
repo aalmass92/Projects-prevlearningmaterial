@@ -5,7 +5,7 @@ void main(){
 
  int reg_a, reg_b, reg_c, reg_d;
   
- int request_code = 0; 
+ int request_code = 2; 
   
   asm volatile ( "cpuid" : "=a"(reg_a), "=b"(reg_b), "=c"(reg_c),
 		 "=d"(reg_d) : "0"(request_code));

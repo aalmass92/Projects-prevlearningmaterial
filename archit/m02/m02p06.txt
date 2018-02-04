@@ -1,0 +1,12 @@
+Number of TAG bits
+
+tag = address bit - set bit -line bit
+tag = 32 - 6 - 6 = 2 bit0
+
+Number of SET bits
+
+6bits
+
+Number of LINE bits
+
+6bitss

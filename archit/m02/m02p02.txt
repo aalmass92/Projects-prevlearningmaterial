@@ -1,0 +1,7 @@
+linear add : 0x2878dd7c
+pagedir : 0xc65be998
+pagetable: 0xbe3ad38c
+page: 0xa028fcf5
+
+
+physical add : 0xa028fd7c
