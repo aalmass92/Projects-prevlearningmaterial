@@ -6,7 +6,7 @@ int funbot( int  a ,int  b , char *str);
 int funtop( int a, int b, char *str){
 
   printf("Address of funtop is: 0x%0x\n", &funtop);
-  printf("funtop1 a%d b%d\n", a,b);
+  // printf("funtop1 a%d b%d\n", a,b);
   a = a * 2;
   b = b * 3;
   
@@ -20,7 +20,7 @@ int funtop( int a, int b, char *str){
 
 
 int funbot(int a ,int  b , char *str){
-  printf("funbot a%d b%d\n", a,b);
+  //  printf("funbot a%d b%d\n", a,b);
   printf("Address of funbot is: 0x%0x\n", &funbot);
 
   printf("%s\n", str);

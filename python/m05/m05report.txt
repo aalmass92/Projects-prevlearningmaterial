@@ -1,0 +1,8 @@
+Instructions that pass the parameters to funbot() function
+  400862:	48 8b 55 e0          	mov    -0x20(%rbp),%rdx
+  400866:	8b 4d e8             	mov    -0x18(%rbp),%ecx
+  400869:	8b 45 ec             	mov    -0x14(%rbp),%eax
+  40086c:	89 ce                	mov    %ecx,%esi
+  40086e:	89 c7                	mov    %eax,%edi
+  400870:	e8 1c 00 00 00       	callq  400891 <funbot>
+ 

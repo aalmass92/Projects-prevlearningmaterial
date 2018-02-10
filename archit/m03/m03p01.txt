@@ -1,0 +1,7 @@
+Opcodes	instruction
+
+cc	INT 3
+
+89 e5  
+
+89 45 fc
