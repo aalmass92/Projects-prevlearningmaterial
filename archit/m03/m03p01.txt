@@ -1,7 +1,7 @@
-Opcodes	instruction
+Opcodes    Instruction
 
-cc	INT 3
+cc	   INT 3
 
-89 e5  
+89 e5      MOV R/M16/32, IN eAX
 
-89 45 fc
+89 45 fc   MOV R/M16/32,  INT r16/32, CLD  
