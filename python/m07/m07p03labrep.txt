@@ -1,0 +1,40 @@
+Value of 2 parameters
+
+
+"The address of main is "
+401483
+
+
+
+stack frame
+
+0022FF00   00405064  dP@.  |format = "%s: 0x%08x
+"
+0022FF04   00404004  @@.  |<%s> = "The address of main is "
+0022FF08   00401483  @.  \<%08x> = 401483
+0022FF0C   0022FFC4  ".
+0022FF10   75C58CD5  Ռu  msvcrt.75C58CD5
+0022FF14   571DB2E7  W
+0022FF18  /0022FF48  H".
+0022FF1C  |004014AD  @.  RETURN to callprin.004014AD from callprin.00401460
+0022FF20  |00404004  @@.  ASCII "The address of main is "
+0022FF24  |00401483  @.  Entry address
+0022FF28  |0022FF68  h".
+
+
+
+assembly language
+
+00401460  /$ 55             PUSH EBP
+00401461  |. 89E5           MOV EBP,ESP
+00401463  |. 83EC 18        SUB ESP,18
+00401466  |. 8B45 0C        MOV EAX,DWORD PTR SS:[EBP+C]             ; |
+00401469  |. 894424 08      MOV DWORD PTR SS:[ESP+8],EAX             ; |
+0040146D  |. 8B45 08        MOV EAX,DWORD PTR SS:[EBP+8]             ; |
+00401470  |. 894424 04      MOV DWORD PTR SS:[ESP+4],EAX             ; |
+00401474  |. C70424 6450400>MOV DWORD PTR SS:[ESP],callprin.00405064 ; |ASCII "%s: 0x%08x
+"
+0040147B  |. E8 10260000    CALL <JMP.&msvcrt.printf>                ; \printf
+00401480  |. 90             NOP
+00401481  |. C9             LEAV
+00401482  \. C3             RETN
