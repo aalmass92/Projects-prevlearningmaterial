@@ -1,0 +1,55 @@
+Problems
+
+#P1.
+
+gcc m04p01hello.c
+
+#P2.
+
+1. cp m04p01hello.c m04stages.c
+3.gcc -E m04stages.c > m04stages-pre.c
+4. gcc -S -o m04stages.s m04stages-pre.c
+
+#P3.
+
+1. gcc -c m04stages.c
+
+#P4.
+1. gcc m04stages.o -o m04stages
+
+#P5.
+
+1.cp m04p01hello.c m04steps.c
+3. make m04steps m04steps.c
+4. gcc -E m04steps.c -o m04steps-pre.c | date| tee m04console.log
+
+
+#P6.
+
+1. gcc -s -o m04steps.s m04steps-pre.c
+
+
+#P7.
+1.gcc -c m04steps.c
+2. du m04steps.o [ 4 K]
+   gcc m04steps.o [excutable]
+
+#P8.
+
+1. gcc m04steps.o -o m04steps
+
+#P9.
+(gdb) list
+1	#include <stdio.h>
+2	
+3	int main (void)
+4	{
+5	
+6	  printf( "Hello steps!\n");
+7	
+8	}
+(gdb) break 3
+Breakpoint 1 at 0x40052a: file m04steps.c, line 3.
+
+
+
