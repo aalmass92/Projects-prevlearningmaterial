@@ -53,3 +53,25 @@ Breakpoint 1 at 0x40052a: file m04steps.c, line 3.
 
 
 
+#P10.
+
+Final count 100sec: 6030617
+count per second:60306
+
+#P11.
+Optimization	Program  countperSecond
+
+-O1		m04p11opt1	 60721
+
+-O2		m04p11opt2	 50521
+
+-O3		m04p11opt3	 45688
+
+#P12.
+
+sudo apt install nasm
+nasm -f elf m04p12.s
+ls -m elf_i386 -s -o m04p12 m04p12.o
+
+
+
