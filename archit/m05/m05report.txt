@@ -1,0 +1,43 @@
+#1
+   before     after
+r0 0x12345678	 0x2468ACF0 
+r1 0x12345678  	 0x12345678
+   		    before     after
+cpsr bits N,Z,C,V,Q 0,0,0,0,0	 0,0,0,0,0
+
+#2
+     before     after
+r0   0x12345678	 0xffffffff
+r1   0x12345679	 0x12345679
+			 before     after
+cpsr bits N,Z,C,V,Q	0,0,0,0,0	1,0,0,0,0
+
+3#
+   before     after
+r0 0x1a2b3c4d 0x12201448
+r1 0x12345678 0x12345678
+
+cpsr bits N,Z,C,V,Q	0,0,0,0,0	0,0,0,0,0
+
+4#
+   before     after
+r0 0x1a2b3c4d 0x1a3f7e7d
+r1 0x12345678 0x12345678
+			before     after
+cpsr bits N,Z,C,V,Q	0,0,0,0,0	0,0,0,0,0
+
+5#
+   before     after
+r0 0x1a2b3c4d 0x081f6a35
+r1 0x12345678 0x12345678
+			before     after
+cpsr bits N,Z,C,V,Q	0,0,0,0,0	0,0,0,0,0
+
+
+#6
+   before     after
+r0 0x1a2b3c4d 0x1a2b3c4d
+r1 0x12345678 0x12345678
+r2 0x02000240 0x10345438
+			 before     after
+cpsr bits N,Z,C,V,Q	0,0,1,0,0	0,01,0,0
