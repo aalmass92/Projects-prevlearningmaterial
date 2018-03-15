@@ -49,3 +49,5 @@ if not kernel32.CreateRemoteThread(h_process, None, 0, h_loadlib, arg_address, 0
     sys.exit(0)
 
 print "[+] Remote Thread with ID 0x%08x created." %(thread_id.value)
+print"0x%08x" % h_kernel32
+print"0x08x"% h_loadlib
