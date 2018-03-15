@@ -40,4 +40,35 @@ r0 0x1a2b3c4d 0x1a2b3c4d
 r1 0x12345678 0x12345678
 r2 0x02000240 0x10345438
 			 before     after
-cpsr bits N,Z,C,V,Q	0,0,1,0,0	0,01,0,0
+cpsr bits N,Z,C,V,Q	0,0,1,0,0	0,0,1,0,0
+
+
+#7
+
+	Before		After
+r0 	0x1a2b3c4d    0x12000901
+r1	0x12345678    0x12345678
+r2	0x02000240    0x02000240
+r3	0x00000002    0x00000002
+
+cpsr bits N,Z,C,V,Q   0,0,1,0,0 	0,0,0,0,0
+
+8#
+
+L1 address = 0x12300000
+
+Virtual address [VA]= 0x00100000
+
+L1[31:20] + VA[19:0]
+
+Physical address= 0x12300000
+
+9#
+
+L1 address = 0x12300000
+
+Virtual address [VA]= 0x00400000
+
+L1[31:20] + VA[19:0]
+
+Physical address= 0x12300000
