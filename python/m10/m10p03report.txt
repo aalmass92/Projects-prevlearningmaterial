@@ -1,0 +1,26 @@
+MOV EAX, [ESP + 0x8]
+LEA EDI, [EAX + 0x24]
+PUSH EDI
+CALL msvcrt.malloc
+
+sequence interger flow
+
+1st. takes parameter off the stack and loads it into eax
+2nd. adds parameter to eax and stores the result in edi
+3nd which final value as a single parameter to the memory allocation routine mmaloc.
+4th. if parameter on the stack is signed, eax contains a very high number which close to the high range because we add a parameter which would create interger over flow and we would end up wth a very low positive value.
+
+sequence mitigating it
+
+Stack Parameter
+Arithmetic Operation
+Arithmetic Result
+Processor Truncates
+=>
+=>
+=>
+=>
+0xFFFFFFF5
+0xFFFFFFF5 + 0x24
+0x100000019 (larger than 32 bits)
+0x00000019
