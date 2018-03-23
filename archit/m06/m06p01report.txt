@@ -1,0 +1,9 @@
+LED		Pin Pad		GPIO Number
+
+User0		V5  		GPIO1_21
+
+User1		U15		GPIO2_22
+
+User2		T5		GPIO2_23
+
+User3		V16		GPIO2_24
