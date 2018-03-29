@@ -1,3 +1,4 @@
+#1
 HTTP/1.1 400 Bad Request
 Date: Wed, 28 Mar 2018 18:41:43 GMT
 Server: Apache/2.2.17 (Linux/SUSE)
@@ -16,3 +17,20 @@ Content-Type: text/html; charset=iso-8859-1
 <address>Apache/2.2.17 (Linux/SUSE) Server at itss.biomea.com/itsc203/cgi-bin/echo.cgi Port 80</address>
 </body></html>
 
+#2
+
+[*] Listening on 10.185.192.163:80
+[*] Accepted connection from: 10.185.192.163:49868
+[*] Received: GET / HTTP/1.1
+Host: 10.185.192.163
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:58.0) Gecko/20100101 Firefox/58.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+
+('10.185.192.163', 49868)
+
+#3

@@ -1,0 +1,24 @@
+import socket
+import datetime
+import threading
+
+
+target_host = "10.163.77.115"
+target_port = 80
+
+# create a socket object
+client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
+
+client.bind((target_host, target_port))
+
+client.listen()
+
+(client,(ip,port))=sock.accept()
+
+# send some data
+client.sendto(datetime.datetime.utcnow().strftime('%Y-%m-%d  %H:%M:%S'),(target_host,target_port))
+
+# receive some data
+#data, addr = client.recvfrom(4096)
+#print data
