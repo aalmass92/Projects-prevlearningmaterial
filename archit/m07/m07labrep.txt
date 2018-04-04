@@ -1,3 +1,4 @@
+
 #1 
 mov r3,r1 
 
@@ -12,6 +13,7 @@ mov r3,r1
 5. The final step is that it is returned (passed) to the register files. 
 
 # 2 
+
 ldr r5,[lr] 
 
 1. The instruction is located in the instruction register. 
@@ -62,9 +64,9 @@ MOVGT R3, #123
 Encoded ARM Instruction = 0b11000011101100000101110000000010
 
 
-#6 
+Problem 6 
 
-Address	      Memory Data
+Address		Memory Data
 
 120		
 
