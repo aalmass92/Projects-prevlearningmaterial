@@ -1,0 +1,2 @@
+ The difference between Windows and Linux is that Windows will allow us to
+sniff all incoming packets regardless of protocol, whereas Linux forces us to specify that we are sniffing ICMP. Note that we are using promiscuous mode, which requires administrative privileges on Windows or root on Linux.

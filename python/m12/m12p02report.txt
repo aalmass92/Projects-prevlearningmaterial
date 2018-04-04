@@ -1,0 +1,14 @@
+Script started on Wed 04 Apr 2018 01:28:06 PM MDT
+]0;ahmed-a@ubuntu: ~/git/ahmed-a/python/m12ahmed-a@ubuntu:~/git/ahmed-a/python/m12$ p[Ksudo python m12disco.py [K
+[sudo] password for ahmed-a: 
+Protocol: ICMP 10.12.96.12 -> 10.187.131.25
+Protocol: ICMP 10.12.96.12 -> 10.187.131.25
+Protocol: ICMP 10.12.96.12 -> 10.187.131.25
+Protocol: ICMP 10.12.96.12 -> 10.187.131.25
+Protocol: ICMP 10.12.96.12 -> 10.187.131.25
+Protocol: ICMP 10.12.96.12 -> 10.187.131.25
+^C]0;ahmed-a@ubuntu: ~/git/ahmed-a/python/m12ahmed-a@ubuntu:~/git/ahmed-a/python/m12$ cat m12p02report.txt 
+]0;ahmed-a@ubuntu: ~/git/ahmed-a/python/m12ahmed-a@ubuntu:~/git/ahmed-a/python/m12$ exit
+exit
+
+Script done on Wed 04 Apr 2018 01:29:22 PM MDT
