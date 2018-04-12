@@ -5,8 +5,8 @@ import urllib2
 
 threads   = 10 
 
-target    = "http://www.test.com"
-directory = "/home/ahmed-a/Downloads/jre1.8.0_161"
+target    = "http://10.185.131.124"
+directory = "/var/www/html"
 filters   = [".jpg",".gif","png",".css"]
 
 os.chdir(directory)
