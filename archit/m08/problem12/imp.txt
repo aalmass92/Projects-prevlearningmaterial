@@ -1,0 +1,11 @@
+to change user 
+
+sudo su git
+
+Three copies are at the following locations
+
+repo is at /home/git/beagle.git created by user git
+
+repo is at /home/fred/git in beaglebone cloned by user fred on beaglebone
+
+repo is at /home/ahmed-a/git/beagle clone by ahmed-a 

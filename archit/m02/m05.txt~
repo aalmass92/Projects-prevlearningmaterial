@@ -1,0 +1,85 @@
+CPUID METHOD:
+
+FORMULA USED TO FIND CACHE SIZE
+
+	This Cache Size in Bytes
+= (Ways + 1) * (Partitions + 1) * (Line_Size + 1) * (Sets + 1)
+= (EBX[31:22] + 1) * (EBX[21:12] + 1) * (EBX[11:0] + 1) * (ECX + 1)
+
+
+LEVEL 1 CACHE:
+		EAX: 0X1C004121
+		ECX: 0X0003F
+		EBX: 0X1C0003f
+		
+Level 1 cache size:
+
+32KB
+
+Level 1 cache associativity:
+
+8WAYS
+
+Level 1 cache line size:
+
+64B
+
+
+LEVEL 2 CACHE:
+
+      	EAX: 0X1C004143
+	ECX: 0X003FF
+	EBX: 0X1C0003F
+
+
+Level 2 cache size
+
+256KB
+
+Level 2 cache associativity
+
+4WAYS
+
+Level 2 cache line size
+
+64B
+
+LEVEL 3 CACHE:
+
+      EAX:0x1C03C163
+      EBX:0x3c0003f
+      ECX:0x00fff
+      
+Level 3 cache size
+
+256 KB
+      
+Level 3 cache associativity
+
+4WAYS
+
+Level 3 cache line size
+
+64B
+
+
+
+Instruction TLB size:
+
+4KB
+
+Instruction TLB associativity
+
+
+
+Instruction TLB number of entries
+
+64
+
+Data TLB size
+
+Data TLB associativity
+
+Data TLB number of entries:
+
+64

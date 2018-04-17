@@ -1,0 +1,96 @@
+#1 
+mov r3,r1 
+
+1. Instruction arrives on data bus. 
+
+2. Then, it is passed to the instruction decoder. 
+
+3. It moves to the register file to gain the value in r1. 
+
+4.  it  move through the multiplxer to the ALU.
+
+5. The final step is that it is returned (passed) to the register files. 
+
+# 2 
+ldr r5,[lr] 
+
+1. The instruction is located in the instruction register. 
+
+2.  it goes to the instruction decoder and the register file.   
+
+3. passed to the address generator which gives the address. 
+
+4. In the ALU, the process will be executed and then will be passed to the register output.   
+
+# 3 
+
+stmfd sp!,{r4.r5.r6.lr} 
+
+1. The instruction gets into the data bus. 
+
+2. Then, it goes to the instruction decoder and will be decoded there. 
+
+3. It goes to the register file and gains the first value. 
+
+4. Memory address will be discovered by passing through address generator. 
+
+5. r4 will be pushed to the stack. 
+
+6. Stack pointer decrements.  
+
+7. r5 and r6 will finish to execute the same processes.   
+
+
+# 4 
+
+Opcode: 0x9 
+
+Binary: 10110001000000000001 
+
+Hex: 0b0001 
+
+
+# 5 
+
+MOV R5,#512
+
+Encoded ARM Instruction = 0b11100011101100000101110000000010
+
+
+MOVGT R3, #123
+
+Encoded ARM Instruction = 0b11000011101100000101110000000010
+
+
+#6 
+
+Address	      Memory Data
+
+120		
+
+124		
+
+12c 		F 
+
+130		G 
+
+134		H 
+
+138		X 
+
+13c 		Y 
+
+140		Z 
+
+144		value h
+
+14c		value g 
+
+150		value f 
+
+154 		EBP 
+
+
+# 7 
+
+The frame pointer within the first 2 instructions of functions is passed and stored into the memory.
