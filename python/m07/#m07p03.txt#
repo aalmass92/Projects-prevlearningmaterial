@@ -1,0 +1,24 @@
+stack frame
+
+0022FF00   00405064  dP@.  |format = "%s: 0x%08x
+"
+0022FF04   00404004  @@.  |<%s> = "The address of main is "
+0022FF08   00401483  ƒ@.  \<%08x> = 401483
+0022FF0C   0022FFC4  Äÿ".
+0022FF10   75C58CD5  ÕŒÅu  msvcrt.75C58CD5
+0022FF14   571DB2E7  ç²W
+0022FF18  /0022FF48  Hÿ".
+0022FF1C  |004014AD  ­@.  RETURN to callprin.004014AD from callprin.00401460
+0022FF20  |00404004  @@.  ASCII "The address of main is "
+0022FF24  |00401483  ƒ@.  Entry address
+0022FF28  |0022FF68  hÿ".
+
+
+
+
+Value of 2 parameters
+
+
+"The address of main is "
+401483
+
