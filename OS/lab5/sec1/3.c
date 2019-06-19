@@ -1,0 +1,57 @@
+/* race cnditton example.c */
+
+#include <pthread.h>
+#include <stdio.h>
+#include <semaphore.h>
+
+void *runner(void *);
+
+#define NUM_THREADS 10
+pthread_t tid[NUM_THREADS]; /* array of thread IDs */
+sem_t sem;
+
+int sum = 0;
+
+main( int argc, char *argv[] )
+{
+int i;
+ pthread_attr_t attr;
+ pthread_attr_init(&attr);
+
+ sem_init(&sem,0,1);
+ 
+ for (i = 0; i<NUM_THREADS; i++)
+ {
+   
+    pthread_create(&tid[i], &attr, runner, argv[i]);
+ }
+
+ for ( i = 0; i < NUM_THREADS; i++)
+   pthread_join(tid[i], NULL); 
+
+ printf("main() reporting that all %d threads have terminated\n", i);
+ printf("I am main! sum=%d\n", sum);
+}
+ /* main */
+
+ void *runner(void *parm)
+ {
+
+   sem_wait(&sem);
+   int i;
+   printf("I am a new thread!\n");
+
+   for(i=0;i<10000;i++)
+     {
+     sum++;
+
+     
+     
+     printf("sum= %d\n",sum);
+
+     
+   }
+   sem_post(&sem);
+   pthread_exit(0);
+
+ }

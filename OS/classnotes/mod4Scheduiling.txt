@@ -1,0 +1,26 @@
+Scheduling Algorthms:
+
+1. Shortest Job first
+
+2. Round Robin ( commin in linux) ( preemptive) 
+3. First in First out fifo ( real time systems ) - nonpreemptive
+
+4. Priority
+
+5. multilevel queue 
+
+Scheduler is a program that determines what process/thread can run next based on scheudling algorthms.
+
+Scheduling criteria
+
+CPU utilization-keep the CPU as busy possible
+
+throughput- number of processes that complete their execution per time unit
+
+turnariund time - amount of time to execute a particular process
+
+waiting time- amount of time a process has been waiting in the ready queue
+
+response time- amount of time it takes from when a request was submitted until the first response is produced insure fairness for all jobs
+
+

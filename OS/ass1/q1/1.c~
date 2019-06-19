@@ -1,0 +1,83 @@
+#include <fcntl.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <string.h>
+
+/*int sendSignal(void)
+{
+
+  kill(pid,
+  
+
+
+
+  }*/
+int printPid(void) /* print pid */
+{
+  int fork_rv;
+    
+  if ( fork_rv ==-1)
+    {
+    perror("fork");
+    }
+
+if ( fork_rv == 0)
+  {
+    printf("My pid is %d\n", getpid());
+  }
+
+ printf("I am waiting for my child %d\n", getpid());
+}
+
+  /* Prints the status, one per line for a given process PID. */
+void print_process_status(pid_t pid)
+{
+  int fd;
+  char filename[24];
+  char status[8192];
+  size_t length;
+  char* next_var;
+
+  /* Generates and reads the status file from proc for specific process. */
+
+  snprintf(filename, sizeof(filename), "/proc/%d/status", (int) pid);
+
+ /* Reads the content of the file. */
+
+ fd = open(filename, O_RDONLY);
+ length = read(fd, status, sizeof(status));
+ close(fd);
+ status[length] = '\0';
+
+ /* Loop over variables. Variables are separated by NULL. */
+ next_var = status;
+
+
+
+while (next_var < status + length)
+ {
+   /* Print the variable. */
+  printf("%s\n", next_var);
+  next_var += strlen (next_var) + 1;
+ }
+}
+
+int main (int argc, char* argv[])
+  
+{
+
+ 
+  pid_t pid = (pid_t) atoi (argv[1]);
+  // print_process_status(pid);
+  // printf("Process ID Entered: %c\n",pid);
+ printPid();
+ print_process_status(getpid());
+ return 0;
+ 
+}
+
+
+

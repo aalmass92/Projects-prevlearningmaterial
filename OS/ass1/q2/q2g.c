@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <pthread.h>
+
+void * getChar(void *input) {
+  // char c;
+  //int i;
+  //while(c == quit){
+    //c = getchar();
+  //printf("The ASCII value of %c  is %d ",c,c);
+
+    char buffer[81];
+    int i, ch;
+
+    for (i = 0; (i < 80) && ((ch = getchar()) != EOF)
+                         && (ch != '\n'); i++)
+    {
+        buffer[i] = (char) ch;
+    }
+
+    // Terminate string with a null character
+    buffer[i] = '\0';
+
+    printf("The ASCII value of %s  is %d ",buffer,buffer);
+
+  }
+
+
+
+
+
+  // printf("The number of inputs entered: %d",i);
+	
+
+
+int main(void) {
+  
+  pthread_t tid1;
+  pthread_create(&tid1, NULL, getChar,NULL);
+  printf("Enter a Character: \n");
+	
+    
+    pthread_join(tid1, NULL);
+
+
+    return 0;
+}

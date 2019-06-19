@@ -1,0 +1,48 @@
+#include <fcntl.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <string.h>
+
+  /* Prints the environment, one per line for a given process PID. */
+
+void print_process_environment(pid_t pid)
+{
+  int fd;
+  char filename[24];
+  char environment[8192];
+  size_t length;
+  char* next_var;
+
+  /* Generates and reads the environ file from proc for specific process. */
+
+  snprintf(filename, sizeof(filename), "/proc/%d/environ", (int) pid);
+
+ /* Reads the content of the file. */
+
+ fd = open(filename, O_RDONLY);
+ length = read(fd, environment, sizeof(environment));
+ close(fd);
+ environment[length] = '\0';
+
+ /* Loop over variables. Variables are separated by NULL. */
+ next_var = environment;
+
+
+
+while (next_var < environment + length)
+ {
+   /* Print the variable. */
+  printf("%s\n", next_var);
+  next_var += strlen (next_var) + 1;
+ }
+}
+
+int main (int argc, char* argv[])
+  
+{ pid_t pid = (pid_t) atoi (argv[1]);
+ print_process_environment(pid);
+ return 0;  
+}

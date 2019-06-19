@@ -1,0 +1,50 @@
+/* race cnditton example.c */
+
+#include <pthread.h>
+#include <stdio.h>
+
+void *runner(void *);
+
+#define NUM_THREADS 10
+pthread_t tid[NUM_THREADS]; /* array of thread IDs */
+pthread_mutex_t  mutex;
+
+int sum = 0;
+
+main( int argc, char *argv[] )
+{
+int i;
+ pthread_attr_t attr;
+ pthread_attr_init(&attr);
+
+ pthread_mutex_init(&mutex,NULL);
+ 
+ for (i = 0; i<NUM_THREADS; i++)
+ {
+    pthread_create(&tid[i], &attr, runner, argv[i]);
+ }
+
+ for ( i = 0; i < NUM_THREADS; i++)
+   pthread_join(tid[i], NULL); 
+
+ printf("main() reporting that all %d threads have terminated\n", i);
+ printf("I am main! sum=%d\n", sum);
+}
+ /* main */
+
+ void *runner(void *parm)
+ {
+
+   pthread_mutex_lock(&mutex);	
+   int i;
+   printf("I am a new thread!\n");
+
+   for(i=0;i<10000;i++)
+     {
+     sum++;
+     printf("sum= %d\n",sum);
+   }
+   pthread_mutex_unlock(&mutex); 
+   pthread_exit(0);
+
+ }

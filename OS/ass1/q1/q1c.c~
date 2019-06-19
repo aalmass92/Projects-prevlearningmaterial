@@ -1,0 +1,76 @@
+#include <fcntl.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <string.h>
+#include <signal.h>
+
+void sig_usr(int signo){
+    if(signo == SIGINT)
+    printf("Signal caught!\n");
+    return;
+}
+
+
+void print_process_status(pid_t pid)
+{
+  int fd;
+  char filename[24];
+  char status[8192];
+  size_t length;
+  char* next_var;
+
+  /* Generates and reads the status file from proc for specific process. */
+
+  snprintf(filename, sizeof(filename), "/proc/%d/status", (int) pid);
+
+ /* Reads the content of the file. */
+
+ fd = open(filename, O_RDONLY);
+ length = read(fd, status, sizeof(status));
+ close(fd);
+ status[length] = '\0';
+
+ /* Loop over variables. Variables are separated by NULL. */
+ next_var = status;
+
+
+
+while (next_var < status + length)
+ {
+   /* Print the variable. */
+  printf("%s\n", next_var);
+  next_var += strlen (next_var) + 1;
+ }
+}
+
+int main()
+{
+ pid_t pid, ppid;
+    ppid = getpid();
+
+   
+    printf("ppid = %d\n", ppid);
+    if((pid = fork()) == 0){ 
+      
+      sleep(4); // Wait for parent to finish setting up
+
+       
+        kill(ppid, SIGINT);
+        //printf("After killing parent...\n");
+    }
+    else{
+      printf("pid=%d\n",pid);
+      print_process_status(pid);
+      	printf("killing parent...\n");
+      // printf("%d %d ",ppid, pid);
+	if(signal(SIGINT,sig_usr) == SIG_ERR)
+	  
+	  //   printf("Signal processed ");
+        sleep(5); // Wait to be killed
+    }
+    return 0;
+  
+}

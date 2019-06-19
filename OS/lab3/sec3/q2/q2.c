@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<unistd.h>
+#include<stdlib.h>
+#include<sys/types.h>
+#include<sys/wait.h>
+
+int main(int argc, char **argv )
+{
+
+  char*args[3];
+
+  args[0] ="ps";
+  args[1] ="-al";
+  args[2] ="NULL";
+
+  int forkvalue = fork();
+   printf("parents %d\n",getpid());
+   int par = getpid(); 
+  if ( forkvalue == 0)
+    {
+
+
+      printf("About to execute ps al with pid %d \n", getpid());
+      execvp("ps", args);
+      exit(0);
+      
+    }
+  
+  else
+    {
+      printf("I am the parent, my PID s %d \n",par);
+      // wait(NULL);
+    }
+}

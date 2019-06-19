@@ -1,0 +1,12 @@
+Scheduling Algorthms
+
+1. Shortest Job first
+
+2. Round Robin ( commin in linux)
+
+3. First in First out fifo ( real time systems)
+
+4. Priority
+
+Scheduler is a program that determines what process/thread can run next based on scheudling algorthms.
+
