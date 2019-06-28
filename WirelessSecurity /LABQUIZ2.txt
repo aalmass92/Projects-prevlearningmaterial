@@ -1,0 +1,185 @@
+﻿
+Title: q_01
+1)	What does the acronym CSMA/CA stand for?
+a.	Collision Sense Master Access/Collision Avoidance
+b.	Collision Sensory Medium Access/Collision Avoidance
+c.	Collision Sense Medium Access/Collision Avoidance
+d.	Collection Sense Medium Access/Collision Avoidance
+
+
+Title: q_02
+2)	What has the longest waiting time and has the lowest priority for medium access is:
+a.	DCF inter-frame spacing
+b.	SIFS
+c.	PCF inter-frame spacing
+d.	DFC inter-frame spacing
+
+Type: MR
+Title: q_03
+3)	The refinements of the DCP Scheme provide priority-based access using three values for IFS. Which of the following are they?  Choose all that apply.
+a.	SIFS
+b.	PIFS
+c.	DIFS 
+d.	RIFS
+
+
+Title: q_04
+4)	Stations with time-sensitive traffic are controlled by the point coordinator while remaining traffic contends for access using
+a.	CMSA
+b.	DIFS
+c.	CSMA	
+d.	DFIS
+
+Type: MR
+Title: q_05
+5)	Which statements are true regarding fragmentation?  Choose all that apply.
+a.	Wireless LANs can have high bit error rates. 
+b.	802.11 uses fragmentation to increase the frame error rate
+c.	The probability of frame errors is much higher for wireless links 
+d.	802.11 uses fragmentation to reduce the frame error rate
+
+Type: MR
+Title: q_06
+6)	In the Mac Data Frame Type CF-Ack which apply?  Choose all that apply.
+a.	Does not carry data
+b.	Carries data
+c.	Contention-based service
+d.	Contention-free service
+
+
+Title: q_07
+7)	In the frame exchange protocol for IEEE 802.11 when a station receives a data frame from another station what happens?
+a.	it returns an acknowledgment (AKC) frame to the source station
+b.	it returns an acknowledgment (ACK) frame to the source station
+c.	it deposits an acknowlegment (ACG) frame to the source station
+d.	it doesn't do anything
+
+
+Title: q_08
+8)	MAC algorithm distributed foundation wireless MAC (DFWMAC) provides a distributed access control mechanism with an optional centralized control built on the bottom
+a.	True
+b.	False
+
+
+Title: q_09
+9)	What is the lower sublayer of the MAC layer referred to as?
+a.	the point coordination function (PCF) 
+b.	the distribute cooperation function (DCF)
+c.	the distributed coordination function (DCF)
+d.	the primary coordination function (PCF)
+
+
+Title:q_10
+10)	What is the function of the point coordination function (PCF)?
+a.	is a centralized MAC algorithm used to provide contention-free service
+b.	makes use of simple algorithm
+c.	provides access to all traffic
+d.	none of the above
+
+
+Title:q_11
+11)	If the medium is idle, the station will NOT transmit; otherwise the station must wait until the current transmission is complete before transmitting
+a.	True
+b.	False
+
+
+Title:q_12
+12)	Why does the DCF include a collision avoidance function (CSMA/CA)?
+a.	none of the answers
+b.	because collision detection(CSMA/CD) is practical on a wireless network
+c.	because collision detection (CSMA/CD) is not practical on a wireless network
+d.	because collection detection (CLMA/CD) is not practical on a wireless network
+
+
+Title:q_13
+13)	which is NOT one of the six control frame subtypes for the MAC control frame?
+a.	Power Save-Poll (PS-Poll)
+b.	Request to Send (RTS)
+c.	Clear to Send (CTS)
+d.	Contention (CT)
+
+
+Title:q_14
+14)	What are the four data-carrying frames in the MAC data frame format?
+a.	Data, Data CF+Ack,Data + CF-Poll,Data + CF-Ack + CF-Poll
+b.	CF-Ack, CF-Poll, CF-Ack+ CF-Poll,NUll
+c.	Null,Data, Data CF+Ack,Data + CF-Poll
+d.	Data, CF-ACK, Data + CF-Poll,Data + CF-Ack + CF-Poll
+
+
+Title:q_15
+15)	What is the purpose of the MAC management frame format?
+a.	Used to manage communications between stations and ASP
+b.	Used to manage communications between stations and APs
+c.	Used to manage communications between SID and PSP
+d.	Used to manage communications between stations only
+
+
+Title:q-16
+16)	Sleeping without missing any messages is referred to as;
+a.	synchronization
+b.	roaming
+c.	power management
+d.	scanning
+
+
+Title: q_17
+17)	Transmission power shouldn’t exceed regulatory limits
+a.	True
+b.	False
+
+Type: MR
+Title: q_18
+18)	Which statements are true about rogue AP?  Choose all that apply.
+a.	Connected to your network
+b.	Connect to the internet via cell or relay
+c.
+d.	Denial of Service
+
+Type: MR
+Title: q_19
+19)	Which Wifi implementations lack mutual (two way) authentication, present day attacks?  Choose all that apply.
+a.	Mac spoofing
+b.	Karma
+c.	Evil Twin	
+d.	WEP
+
+Type: MR
+Title: q_20
+20)	Which of the following are Wifi vulnerabliites?  Choose all that apply.
+a.	Lacks weak mutual authentication
+b.	MAC Spoofing 
+c.	RC4 weak keys;AirSnort, WEPCrack, and dweputils
+d.	WEP vulnerablities
+
+
+Title: q_21
+21)	Which is NOT a WEP weakness?
+a.	WEP does not prevent replay attacks
+b.	WEP does not Prevent forgery of packets
+c.	Improperly uses Rc6
+d.	Problem in the RC-4 algorithm
+
+
+Title: q_22
+22)	What does the acronymn TKIP stand for?
+a.	Temperal Key Integration Protocol
+b.	Temperal Key Integrity Promise
+c.	Temperary key Integrity Protocol
+d.	Temporal Key Integrity Protocol
+
+
+Title: q_23
+23)	What year was TKIP created?
+a.	2001
+b.	1998
+c.	1987
+d.	2002
+
+Type: MR
+Title: q_24
+24)	Which are security features improvements of TKIP?  Choose all that apply.
+a.	Implement a key mixing function that combines secret root key with Initialization Vector (IV) before passing it to RC4 cipher
+b.	WEP merely concatenated the IV with root key and passed to RC4, A sequence counter was added to protect against replay attacks. Packets received out of order ate to be rejected by the access point.
+c.	TKIP implements a 64-bit Message Integrity Check (MIC)
+d.	None of the above
